@@ -1,0 +1,41 @@
+<!DOCTYPE html> {% extends 'goalapp/basee.html' %} {% block content %}
+<section class="section">
+    {% if messages %} {% for message in messages %}
+    <article class="message is-warning">
+        <div class="message-header">
+            <p>Nice!</p>
+        </div>
+        <div class="message-body">
+            {{ message }}
+        </div>
+    </article>
+    {% endfor %} {% endif %}
+    <table class="table is-hoverable is-fullwidth">
+        <thead>
+            <tr>
+                <th>Goals</th>
+                <th>Completed</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        {% for goal in goals %}
+        <tr>
+            <td>
+                {% if goal.completed == True %}
+                <span style="text-decoration: line-through">{{ goal.task }}</span> {% else %} {{ goal.task }} {% endif %}
+            </td>
+            <td>
+                {% if goal.completed == True %}
+                <i class="far fa-check-circle"></i>
+                <a href="{% url 'mark_incomplete_goal' goal.id %}">Mark Incomplete</a> {% else %}
+                <i class="far fa-circle"></i>
+                <a href="{% url 'mark_complete_goal' goal.id %}">Mark Complete</a> {% endif %}
+            </td>
+            <td>
+                <a href="{% url 'delete_goal' goal.id %}">Remove Goal</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+{% endblock %}

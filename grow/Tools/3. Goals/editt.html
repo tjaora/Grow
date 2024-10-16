@@ -1,0 +1,18 @@
+{% extends 'goalapp/basee.html' %}
+ 
+{% block content %}
+    <section class="section">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="field has-addons">
+                <div class="control">
+                    <input name="task" class="input" type="text" placeholder="{{ goal.task }}" value="{{ goal.task }}">
+                    <input name="completed" type="hidden" value="{{ goal.completed }}">
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-link">Edit Todo</button>
+                </div>
+            </div>
+        </form>
+    </section>
+{% endblock %}

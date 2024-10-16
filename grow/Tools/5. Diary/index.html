@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Diary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+</head>
+
+<body id="bg" style="background-image: url('{% static "accounts/images/diarybg.png" %}')">
+    <section class="hero is-dark">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    My Diary
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <button class="button is-dark is-rounded"><a class="button is-dark" href="{% url 'add' %}">Add a new diary</a></button>
+                        <button class="button is-dark is-rounded"><a class="button is-dark" href="{% url 'home' %}">Home</a></button>
+                    </div>
+                </div>
+            </article>
+
+            {% for entry in entries %}
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>{{ entry.date_posted }}</strong> <!if you use double curly bracket, then you can use variable inside it. Here "entry" is the thing you used for for loop. date is used from "Entry" class from models.py>
+                                <a href="{% url 'delete_entry' entry.id %}"><button class="button is-small is-light is-rounded">Delete</button></a>
+                                <br> {{ entry.text }}
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+
+        </div>
+
+    </section>
+    <footer class="footer">
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+    height: 100vh;
+    background-image: url("../3. Goals/images/3d.jpg");
+}
+
+#bg {
+    background-image: url("../3. Goals/goals.jpg");
+    height: 1vh;
+    width: 98vh;
+}
+
+.navbar-end {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-left: 98rem;
+}
+
+.control {
+    padding-right: 1rem;
+}
+
+.field_has-addons {
+    display: flex;
+    flex-direction: row;
+}

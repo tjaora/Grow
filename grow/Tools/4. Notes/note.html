@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'notes/css/note.css' %}" media="screen" rel="stylesheet" type="text/css" />
+    <title>My Notes</title>
+</head>
+<body id="bg" style="background-image: url('{% static "notes/images/dark wood 4.jpg" %}')">
+<h1>My Notes</h1>
+<ul>
+    {% for note in notes.all %}
+ 	<li> 
+      <a href="{% url 'delete_note' note.id %}"><button>Delete</button>
+      <p><br/>
+      <strong><h5><u>{{ note.created }}</u></h5></strong><br/>
+      <p> {{note.text}} </p> 
+      </a>
+    </li>
+    {% endfor %}
+</ul>
+<form method="POST" action="">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Add note">
+<p></p><br/>
+<button><a href="{% url 'home' %}">Back</a></button>
+</form>
+</body>
+</html>
+
+
+
+

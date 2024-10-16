@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css">
+    <link rel="stylesheet" href="../3. About page/ab1.css">
+    <!--script src="{% static 'js/jquery.js' %}"><script/!-->
+</head>
+
+<body id="bg">
+    <!-- about section starts  -->
+
+    <section id="about" class="container">
+
+        <div class="heading text-center">
+            <h1><span>about</span></h1>
+        </div>
+
+        <div class="row min-vh-30">
+
+            <div class="col-md-6 text-center text-md-left align-self-center content">
+                <p>There comes a point in our life, when for some reason, we feel frustrated, hopeless, demotivated, and clueless. We feel unworthy and undeserving. We struggle to find the true purpose of our life.<br/> During that tough time, we fail to
+                    find a friend who understands and listens to our problem. We, alone, try to start everything all over again,but fail to follow a proper guideline.<br/> Hence, we get distracted, give up on life, suffer alone, develop a low self-esteem,
+                    start living an unordered and unhealthy life.</p>
+                <p>GROW app is here to remind us that, every human has unbelievable potential to achieve greatness.<br/>It helps to get us back on the right track, builds a healthy and productive life style.</p>
+                <p>The app mainly contains 2 sections:<br> (1) Growth: This section takes care of user's physical, mental, and personal health.<br>(2) Tools: This section provides a lot useful tools for the users.</p>
+            </div>
+
+            <div class="col-md-6 image">
+                <img src="../3. About page/logo.PNG" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends  -->
+
+
+    <!-- dish section starts  -->
+    <section id="dish1" class="container">
+
+        <div class="heading text-center">
+            <h1><u><span>Growth</span></u></h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="../3. About page/physical.jpg" alt="">
+                <div class="info">
+                    <h3>1. Physical</h3>
+                    <p>This section helps you to improve your:<br/>1. Health<br/>2. Diet<br/>3. Sleep</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../3. About page/mental2.jpg" alt="">
+                <div class="info">
+                    <h3>2. Mental</h3>
+                    <p>This section takes care of your mental health.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../3. About page/personal2.png" alt="">
+                <div class="info">
+                    <h3>3. Personal</h3>
+                    <p>This section helps you to make you understand yourself better.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="dish2" class="container">
+
+        <div class="heading text-center">
+            <h1><u><span>Tools</span></u></h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="../3. About page/todo.jpg" alt="">
+                <div class="info">
+                    <h3>1. To-do list</h3>
+                    <p>To accomplish your daily activities, a to-do list is a must.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../3. About page/calender.jpg" alt="">
+                <div class="info">
+                    <h3>2. Event Calendar</h3>
+                    <p>It helps to organize all your upcoming events.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../3. About page/goal.png" alt="">
+                <div class="info">
+                    <h3>3. Goals</h3>
+                    <p>This section helps you to achieve your life goals.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../3. About page/note.jpg" alt="">
+                <div class="info">
+                    <h3>4. Notes</h3>
+                    <p>Here you can quickly note down your thoughts, ideas etc.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="../3. About page/diary.png" alt="">
+                <div class="info">
+                    <h3>5. Diary</h3>
+                    <p>You can share everything with your personal diary.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- dish section ends  -->
+
+
+
+
+
+    <!-- script part starts  -->
+
+    <script>
+        $(document).ready(function() {
+
+            $('.fa-hamburger').click(function() {
+                $(this).toggleClass('fa-times');
+                $('nav').toggleClass('nav-toggle');
+            });
+
+            $('nav ul li a').click(function() {
+                $('.fa-hamburger').removeClass('fa-times');
+                $('nav').removeClass('nav-toggle');
+            });
+
+            $('.dot1').click(function() {
+                $('.vid1').css('display', 'block');
+                $('.vid2').css('display', 'none');
+                $('.vid3').css('display', 'none');
+            });
+
+            $('.dot2').click(function() {
+                $('.vid2').css('display', 'block');
+                $('.vid1').css('display', 'none');
+                $('.vid3').css('display', 'none');
+            });
+
+            $('.dot3').click(function() {
+                $('.vid3').css('display', 'block');
+                $('.vid1').css('display', 'none');
+                $('.vid2').css('display', 'none');
+            });
+
+            $(window).on('scroll load', function() {
+                if ($(window).scrollTop() > 10) {
+                    $('#header').addClass('header-active');
+                } else {
+                    $('#header').removeClass('header-active');
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
