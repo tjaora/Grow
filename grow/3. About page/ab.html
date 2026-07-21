@@ -1,187 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>About</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css">
-    <link rel="stylesheet" href="../3. About page/ab1.css">
-    <!--script src="{% static 'js/jquery.js' %}"><script/!-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About Grow</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+  <link rel="stylesheet" href="ab1.css">
+
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body id="bg">
-    <!-- about section starts  -->
+<div class="container-img">
+ 
+  <header id="header">
+    <div class="logo">
+      <img src="logo.PNG" alt="Grow logo">
+    </div>
+     <input type="checkbox" id="nav-check" class="nav-check">
+    <label for="nav-check" class="nav-label" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-    <section id="about" class="container">
+    <nav>
+      <ul>
+        <li><a href="../2. Home Page/home.html">Home</a></li>
+ 
+        <li><a href="#">Growth</a>
+          <ul class="sub-menu">
+            <li><a href="#">Physical</a>
+              <ul>
+                <li><a href="https://www.nhs.uk/oneyou/how-are-you-quiz/">Health</a></li>
+                <li><a href="https://doctorsthatdo.osteopathic.org/diet-quiz-which-diet-suits-you-best">Diet</a></li>
+                <li><a href="https://www.helpguide.org/articles/sleep/getting-better-sleep.htm">Sleep</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Mental</a>
+              <ul>
+                <li><a href="https://www.nhs.uk/oneyou/every-mind-matters/your-mind-plan-quiz/">Test</a></li>
+                <li><a href="https://www.goalcast.com/2017/12/14/8-habits-healthy-mind-and-body/">Information</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Personal</a>
+              <ul>
+                <li><a href="https://www.16personalities.com/free-personality-test">Personality</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+ 
+        <li id="tools"><a href="#">Tools</a>
+          <ul>
+            <li><a href="../Tools/1. Todo list/todo.html">To-Do List</a></li>
+            <li><a href="../Tools/2. Event Calendar/calendar.html">Events</a></li>
+            <li><a href="../Tools/3. Goals/basee.html">Goals</a></li>
+            <li><a href="../Tools/4. Notes/note.html">Notes</a></li>
+            <li><a href="../Tools/5. Diary/index.html">Diary</a></li>
+          </ul>
+        </li>
+ 
+        <li><a href="../1. Login and registration pages/login.html">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <div class="heading text-center">
-            <h1><span>about</span></h1>
+  <!-- About section -->
+  <section id="about" class="container">
+    <div class="heading text-center">
+      <h1><span>About</span></h1>
+    </div>
+
+    <div class="row min-vh-30">
+      <div class="col-md-6 text-center text-md-left align-self-center content">
+        <p>There comes a point in our life, when for some reason, we feel frustrated, hopeless,
+          demotivated, and clueless. We feel unworthy and undeserving. We struggle to find the
+          true purpose of our life.<br><br>
+          During that tough time, we fail to find a friend who understands and listens to our
+          problem. We, alone, try to start everything all over again, but fail to follow a proper
+          guideline.<br><br>
+          Hence, we get distracted, give up on life, suffer alone, develop a low self-esteem,
+          and start living an unordered and unhealthy life.</p>
+        <p>GROW app is here to remind us that every human has unbelievable potential to achieve
+          greatness. It helps to get us back on the right track and builds a healthy, productive
+          lifestyle.</p>
+        <p>The app mainly contains 2 sections:<br>
+          (1) <strong>Growth</strong>: Takes care of the user's physical, mental, and personal health.<br>
+          (2) <strong>Tools</strong>: Provides useful tools for day-to-day productivity.</p>
+      </div>  
+    </div>
+  </section>
+
+  <!-- Growth section -->
+  <section id="dish1" class="container">
+    <div class="heading text-center">
+      <h1><u><span>Growth</span></u></h1>
+    </div>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="physical.jpg" alt="Physical health">
+        <div class="info">
+          <h3>1. Physical</h3>
+          <p>Improve your Health, Diet, and Sleep.</p>
         </div>
-
-        <div class="row min-vh-30">
-
-            <div class="col-md-6 text-center text-md-left align-self-center content">
-                <p>There comes a point in our life, when for some reason, we feel frustrated, hopeless, demotivated, and clueless. We feel unworthy and undeserving. We struggle to find the true purpose of our life.<br/> During that tough time, we fail to
-                    find a friend who understands and listens to our problem. We, alone, try to start everything all over again,but fail to follow a proper guideline.<br/> Hence, we get distracted, give up on life, suffer alone, develop a low self-esteem,
-                    start living an unordered and unhealthy life.</p>
-                <p>GROW app is here to remind us that, every human has unbelievable potential to achieve greatness.<br/>It helps to get us back on the right track, builds a healthy and productive life style.</p>
-                <p>The app mainly contains 2 sections:<br> (1) Growth: This section takes care of user's physical, mental, and personal health.<br>(2) Tools: This section provides a lot useful tools for the users.</p>
-            </div>
-
-            <div class="col-md-6 image">
-                <img src="../3. About page/logo.PNG" alt="">
-            </div>
-
+      </div>
+      <div class="box">
+        <img src="mental2.jpg" alt="Mental health">
+        <div class="info">
+          <h3>2. Mental</h3>
+          <p>Take care of your mental wellbeing.</p>
         </div>
-
-    </section>
-
-    <!-- about section ends  -->
-
-
-    <!-- dish section starts  -->
-    <section id="dish1" class="container">
-
-        <div class="heading text-center">
-            <h1><u><span>Growth</span></u></h1>
+      </div>
+      <div class="box">
+        <img src="personal2.png" alt="Personal growth">
+        <div class="info">
+          <h3>3. Personal</h3>
+          <p>Understand yourself better.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="box-container">
+  <!-- Tools section -->
+  <section id="dish2" class="container">
+    <div class="heading text-center">
+      <h1><u><span>Tools</span></u></h1>
+    </div>
 
-            <div class="box">
-                <img src="../3. About page/physical.jpg" alt="">
-                <div class="info">
-                    <h3>1. Physical</h3>
-                    <p>This section helps you to improve your:<br/>1. Health<br/>2. Diet<br/>3. Sleep</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="../3. About page/mental2.jpg" alt="">
-                <div class="info">
-                    <h3>2. Mental</h3>
-                    <p>This section takes care of your mental health.</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="../3. About page/personal2.png" alt="">
-                <div class="info">
-                    <h3>3. Personal</h3>
-                    <p>This section helps you to make you understand yourself better.</p>
-                </div>
-            </div>
-
+    <div class="box-container">
+      <div class="box">
+        <img src="todo.jpg" alt="To-do list tool">
+        <div class="info">
+          <h3>1. To-do List</h3>
+          <p>Accomplish your daily activities with a clear to-do list.</p>
         </div>
-
-    </section>
-
-    <section id="dish2" class="container">
-
-        <div class="heading text-center">
-            <h1><u><span>Tools</span></u></h1>
+      </div>
+      <div class="box">
+        <img src="calender.jpg" alt="Event calendar tool">
+        <div class="info">
+          <h3>2. Event Calendar</h3>
+          <p>Organise all your upcoming events.</p>
         </div>
-
-        <div class="box-container">
-
-            <div class="box">
-                <img src="../3. About page/todo.jpg" alt="">
-                <div class="info">
-                    <h3>1. To-do list</h3>
-                    <p>To accomplish your daily activities, a to-do list is a must.</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="../3. About page/calender.jpg" alt="">
-                <div class="info">
-                    <h3>2. Event Calendar</h3>
-                    <p>It helps to organize all your upcoming events.</p>
-                </div>
-            </div>
-            <div class="box">
-                <img src="../3. About page/goal.png" alt="">
-                <div class="info">
-                    <h3>3. Goals</h3>
-                    <p>This section helps you to achieve your life goals.</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="../3. About page/note.jpg" alt="">
-                <div class="info">
-                    <h3>4. Notes</h3>
-                    <p>Here you can quickly note down your thoughts, ideas etc.</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="../3. About page/diary.png" alt="">
-                <div class="info">
-                    <h3>5. Diary</h3>
-                    <p>You can share everything with your personal diary.</p>
-                </div>
-            </div>
-
-
-
+      </div>
+      <div class="box">
+        <img src="goal.png" alt="Goals tool">
+        <div class="info">
+          <h3>3. Goals</h3>
+          <p>Track and achieve your life goals.</p>
         </div>
+      </div>
+      <div class="box">
+        <img src="note.jpg" alt="Notes tool">
+        <div class="info">
+          <h3>4. Notes</h3>
+          <p>Quickly note down your thoughts and ideas.</p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="diary.png" alt="Diary tool">
+        <div class="info">
+          <h3>5. Diary</h3>
+          <p>Share everything with your personal diary.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </section>
-
-    <!-- dish section ends  -->
-
-
-
-
-
-    <!-- script part starts  -->
-
-    <script>
-        $(document).ready(function() {
-
-            $('.fa-hamburger').click(function() {
-                $(this).toggleClass('fa-times');
-                $('nav').toggleClass('nav-toggle');
-            });
-
-            $('nav ul li a').click(function() {
-                $('.fa-hamburger').removeClass('fa-times');
-                $('nav').removeClass('nav-toggle');
-            });
-
-            $('.dot1').click(function() {
-                $('.vid1').css('display', 'block');
-                $('.vid2').css('display', 'none');
-                $('.vid3').css('display', 'none');
-            });
-
-            $('.dot2').click(function() {
-                $('.vid2').css('display', 'block');
-                $('.vid1').css('display', 'none');
-                $('.vid3').css('display', 'none');
-            });
-
-            $('.dot3').click(function() {
-                $('.vid3').css('display', 'block');
-                $('.vid1').css('display', 'none');
-                $('.vid2').css('display', 'none');
-            });
-
-            $(window).on('scroll load', function() {
-                if ($(window).scrollTop() > 10) {
-                    $('#header').addClass('header-active');
-                } else {
-                    $('#header').removeClass('header-active');
-                }
-            });
-
-        });
-    </script>
+  <script>
+     $(document).ready(function () {
+ 
+      
+      $('nav ul li a').on('click', function () {
+        document.getElementById('nav-check').checked = false;
+      });
+ 
+      /* Scroll-active header — kept as-is, jQuery is still fine for this */
+      $(window).on('scroll load', function () {
+        if ($(window).scrollTop() > 10) {
+          $('#header').addClass('header-active');
+        } else {
+          $('#header').removeClass('header-active');
+        }
+      });
+ 
+    });
+  </script>
+</div>
 
 </body>
-
 </html>
