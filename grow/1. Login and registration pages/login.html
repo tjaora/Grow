@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Login Form</title>
-    <link rel="stylesheet" href="style.css">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – Grow</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="bg">
-    <div class="hero"></div>
-    <div class="form-box">
+  <div class="hero" aria-hidden="true"></div>
 
-        <br><br><button type="submit" value="Login" class="submit-btn"><h4>Log In With Your Account</h4></button>
-        <div class="social-icons">
-            <img src="../1. Login and registration pages/images/f.png">
-            <img src="../1. Login and registration pages/images/tw.png">
-            <img src="../1. Login and registration pages/images/gp.png">
-        </div>
+  <div class="form-box">
 
-        <form action="" method="post" id="login" class="input-group">
-            <input for="username" type="text" class="input-field" placeholder="User ID" name="username" required>
-            <input for="password" type="password" name="password" class="input-field" placeholder="Enter Password" required><br><br><br>
-            <button type="submit" value="Login" class="submit-btn"><a href="../2. Home page/home.html">Log In</a></button><br><br>
-            <a href="../1. Login and registration pages/register.html">Not registered? Click here to sign up.</a>
-        </form>
-        <form action="" method="post" id="register" class="input-group">
-            <input for="username" type="text" class="input-field" placeholder="User ID" name="username" required>
-            <input for="email" type="email" class="input-field" placeholder="Email ID" {{form.email}}> <br>
-            <input for="password1" type="password" class="input-field" placeholder="Enter Password" {{form.password1}}><br>
-            <input for="password2" type="password" class="input-field" placeholder="Confirm Password" {{form.password2}}><br><br><br>
-            <button type="submit" value="Register" class="submit-btn">Register</button>
-        </form>
+    
+    <h2 class="form-title">Log In to Your Account</h2>
+
+    <!-- Social sign-in icons -->
+    <div class="social-icons">
+      
+      <img src="images/f.png"  alt="Sign in with Facebook">
+      <img src="images/tw.png" alt="Sign in with Twitter">
+      <img src="images/gp.png" alt="Sign in with Google">
     </div>
-    <script>
-        var x = document.getElementById("login")
-        var y = document.getElementById("register")
-        var z = document.getElementById("btn")
 
-        function register() {
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
-        }
+    <form action="" method="post" id="login" class="input-group">
+      
+      <label for="username" class="sr-only">User ID</label>
+      <input
+        id="username"
+        type="text"
+        name="username"
+        class="input-field"
+        placeholder="User ID"
+        required
+        autocomplete="username"
+      >
 
-        function login() {
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0";
-        }
-    </script>
+      <label for="password" class="sr-only">Password</label>
+      <input
+        id="password"
+        type="password"
+        name="password"
+        class="input-field"
+        placeholder="Enter Password"
+        required
+        autocomplete="current-password"
+      >
+
+      
+      <button type="submit" class="submit-btn">Log In</button>
+
+      <a href="register.html" class="form-link">
+        Not registered? Click here to sign up.
+      </a>
+    </form>
+
+  </div>
 </body>
-
 </html>
