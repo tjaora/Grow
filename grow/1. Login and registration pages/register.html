@@ -1,53 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register – Grow</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="bg">
-    <div class="hero"></div>
-    <div class="form-box">
-        <br><br>
-        <button type="submit" value="Login" class="submit-btn"><h4>Create An Account</h4></button><br>
-        <div class="social-icons">
-            <img src="../1. Login and registration pages/images/f.png">
-            <img src="../1. Login and registration pages/images/tw.png">
-            <img src="../1. Login and registration pages/images/gp.png">
-        </div>
-        <form action="" method="post" id="login" class="input-group">
+  <div class="hero" aria-hidden="true"></div>
 
-            <input for="username" type="text" class="input-field" placeholder="User ID" {{form.username}}>
-            <input for="email" type="email" class="input-field" placeholder="Email ID" {{form.email}}>
-            <input for="password1" type="password" class="input-field" placeholder="Enter Password" {{form.password1}}>
-            <input for="password2" type="password" class="input-field" placeholder="Confirm Password" {{form.password2}}><br><br><br>
-            <button type="submit" value="Register" class="submit-btn"><a href="../1. Login and registration pages/login.html">Register</a></button>
-        </form>
+  <div class="form-box">
+    <h2 class="form-title">Create an Account</h2>
 
-        <form action="" method="post" id="register" class="input-group">
-            <input for="username" type="text" class="input-field" placeholder="User ID" name="username" required>
-            <input for="password" type="password" name="password" class="input-field" placeholder="Enter Password" required><br><br><br>
-            <button type="submit" value="Login" class="submit-btn">Log In</button>
-        </form>
+    <div class="social-icons">
+      <img src="images/f.png"  alt="Sign up with Facebook">
+      <img src="images/tw.png" alt="Sign up with Twitter">
+      <img src="images/gp.png" alt="Sign up with Google">
     </div>
-    <script>
-        var x = document.getElementById("login")
-        var y = document.getElementById("register")
-        var z = document.getElementById("btn")
 
-        function login() {
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
-        }
+    
+    <form action="" method="post" class="input-group">
+      {% csrf_token %}
 
-        function registration() {
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0";
-        }
-    </script>
+      <label for="reg-username" class="sr-only">User ID</label>
+      <input
+        id="reg-username"
+        type="text"
+        name="username"
+        class="input-field"
+        placeholder="User ID"
+        required
+        autocomplete="username"
+      >
+
+      <label for="reg-email" class="sr-only">Email Address</label>
+      <input
+        id="reg-email"
+        type="email"
+        name="email"
+        class="input-field"
+        placeholder="Email Address"
+        required
+        autocomplete="email"
+      >
+
+      <label for="reg-pass1" class="sr-only">Password</label>
+      <input
+        id="reg-pass1"
+        type="password"
+        name="password1"
+        class="input-field"
+        placeholder="Enter Password"
+        required
+        autocomplete="new-password"
+      >
+
+      <label for="reg-pass2" class="sr-only">Confirm Password</label>
+      <input
+        id="reg-pass2"
+        type="password"
+        name="password2"
+        class="input-field"
+        placeholder="Confirm Password"
+        required
+        autocomplete="new-password"
+      >
+
+     <button type="submit" class="submit-btn">Register</button>
+
+      <a href="login.html" class="form-link">
+        Already have an account? Log in.
+      </a>
+    </form>
+
+  </div>
 </body>
-
 </html>
