@@ -151,7 +151,7 @@ nav ul ul {
   opacity: 0;
   visibility: hidden;
   transition: top 0.3s, opacity 0.2s;
-  background: rgba(250, 245, 210, 0.97);
+  background: transparent;
   min-width: 160px;
 }
 
@@ -170,7 +170,8 @@ nav ul ul li {
   margin: 0;
   width: 160px;
   float: none;
-  display: list-item;
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -196,6 +197,7 @@ nav ul ul li a:hover {
   height: 6rem;
   box-shadow: 0.2rem 0 0.5rem #545628;
   top: 0 !important;
+  justify-content: space-around !important;
 }
 
 .header-active nav ul li a {
@@ -209,7 +211,15 @@ nav ul ul li a:hover {
 .header-active nav ul ul li a {
   color: rgb(55, 53, 14);   /* dropdown text stays dark on pale dropdown bg */
 }
+.sub-menu{
+  display: flex;
+  flex-direction: column;
+}
 
+.sub-menu li ul{
+  flex-direction: column;
+    align-items: flex-start;
+}
 
 /* ABOUT SECTION */
 #about {
